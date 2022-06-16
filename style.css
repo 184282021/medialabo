@@ -1,0 +1,8 @@
+h1{
+color:purple;
+border: bottom 1px solid;
+}
+h2{
+    color:crimson;
+    border-bottom: dashed rgb(205, 205, 252);
+}
