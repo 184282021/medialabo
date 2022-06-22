@@ -4,5 +4,6 @@ h1{
     }
     p{
         color:rgb(255, 65, 103);
-        border-bottom: dashed rgb(205, 205, 252);
+        border: dashed rgb(205, 205, 252);
+        box-align: center;
     }
