@@ -19,7 +19,7 @@ function hantei() {
 
     kaisu=kaisu+1;
     if(kaisu>=4){
-        console.log(答えは"yoso"でした．すでにゲームは終わっています);
+        console.log(答えは'yoso'でした．すでにゲームは終わっています);
     }else if(yoso===hantei){
         console.log(正解です．おめでとう!);
     }else if(yoso>hantei){
