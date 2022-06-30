@@ -34,7 +34,7 @@ h2sevenOcean.insertAdjacentElement('afterend',ul);
 for (let i of oceans) {
   // （この中を完成させる）
   li=document.createElement('li');
-  li.textContent=0;
+  li.textContent=i;
   ul.insertAdjacentElement('beforeend',li);
 }
 
