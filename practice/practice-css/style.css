@@ -14,7 +14,10 @@ body {
 
 h1 {
   font-size: 4em;
+
 }
+
+
 
 h2 {
   font-size: 3.2em;
@@ -24,15 +27,26 @@ pli {
   font-size: 1.7em;
 }
 
+
 /*+++ more specific section styles +++*/
 
 /* header and footer */
 
 header, footer {
-  background-colour: teal;
+  background-color: teal;
   height: 10em;
   padding: 2em;
 }
+
+p.target {
+  font-size: 20px;
+  padding: 40px;
+  margin: 0px;
+  width: 800px;
+  height: 100px;
+  background: darkgreen;
+}
+
 
 h1, footer p {
   margin: 0px;
@@ -56,5 +70,5 @@ main p, main li {
 
 img {
   float: right
-  margin: 1.2em 2em;
+  margin 1.2em 2em;
 }
