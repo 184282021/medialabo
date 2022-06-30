@@ -38,18 +38,10 @@ header, footer {
   padding: 2em;
 }
 
-p.target {
-  font-size: 20px;
-  padding: 40px;
-  margin: 0px;
-  width: 800px;
-  height: 100px;
-  background: darkgreen;
-}
 
 
 h1, footer p {
-  margin: 0px;
+  margin: -70px;
 }
 
 h1 {
@@ -65,7 +57,6 @@ main {
 
 main p, main li {
   line-height: 2;
-  font-size: 16px;
 }
 
 img {
