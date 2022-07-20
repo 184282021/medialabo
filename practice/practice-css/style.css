@@ -41,7 +41,7 @@ header, footer {
 
 
 h1, footer p {
-  margin: 0px;
+  margin: 0em;
 }
 
 h1 {
@@ -57,10 +57,9 @@ main {
 
 main p, main li {
   line-height: 2;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 img {
-  float: right
-  margin 0em 0em;
+  float: right;
 }
