@@ -4,11 +4,10 @@ h1{
     border: bottom 1px solid;
     }
     p{
-        color:rgb(255, 65, 103);
+        color:rgb(10, 10, 10);
         border: dashed rgb(205, 205, 252);
         box-align: center;
-        background-color: rgb(0, 128, 128);
     }
     ul{
-        background-color: rgb(125, 14, 14);
+        background-color: rgb(251, 250, 250);
       }
