@@ -86,114 +86,96 @@ console.log(list.g1.title);
 
 
 //
-let s1 = document.querySelector('tbody#b1');
 
+  /*let pro = data.list.g1[0].service.name;
+  let s = document.querySelector('span#pro');
+s.textContent = pro;
+  let pra = data.list.g1[0].title;
+  let d = document.querySelector('span#pra');
+d.textContent = pra;*/
+let bangumi;
+let b = document.querySelector('#print');
+b.addEventListener('click', kensaku);
 
+function kensaku(){
+  //URLを設定
 
-  
-function sendRequest(){
-  
-  const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
-  const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
+  //ジャンル選び
+  let i = document.querySelectorAll('input[name="janru"]');
+  let o = document.querySelector('input[name="janru"]');
+  let janru = o.value;
+  //番組選び
+  let p = document.querySelectorAll('input[name="bangumi"]');
 
-  //urlを指定
-  let url='https://www.nishita-lab.org/web-contents/jsons/nhk/'+Cha+'-'+Gan+'-j.json';
-  
-  // 通信開始
+  //if (typeof data.service.name === 'string') {
+    //let chan = JSON.parse(data.service.name);
+//}
+  //let bangumi;
+  for(let r of p){
+    if(r.checked){
+      bangumi = r.value;
+    }
+  }
+  let url ='https://www.nishita-lab.org/web-contents/jsons/nhk/'+ bangumi +'-'+janru+'-'+'j.json';
 
   axios.get(url)
-  .then(hantei)   // 通信成功
+  .then(showResult)   // 通信成功
   .catch(showError)   // 通信失敗
-  .then(finish);      // 通信の最後の処理
+  .then(finish);  
+
+  console.log(janru);
+  console.log(bangumi);
 }
 
-
-
-
-function hantei(resp) {
-  const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
-  const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
-
-
-    // サーバから送られてきたデータを出力
-    let data = resp.data;
-
-    // data が文字列型なら，オブジェクトに変換する
-    if (typeof data === 'string') {
-        data = JSON.parse(data);
-    }
-
-  let pyoso1 = document.querySelectorAll('td');//td要素を取得する
-  for (let TD of pyoso1) {
-    TD.remove();
-  }
-  let TR = document.querySelectorAll('tr');
-  for (let T of TR) {
-    T.remove();
-  }
+function showResult(resp) {
+  // サーバから送られてきたデータを出力
+  let data = resp.data;
   
+  //let i = document.querySelectorAll(data.list);
+  //console.log(i.length);
 
+  // data が文字列型なら，オブジェクトに変換する
+  if (typeof data === 'string') {
+      data = JSON.parse(data);
+  }
+   
+//if(typeof bangumi === "string"){
+    //  bangumi = JSON.parse(bangumi);
+//}
 
-
-
-
-if(data===null){
-  let aaa = document.createElement('p');
-  aaa.textContent ='検索結果に合う番組はありませんでした.';
-  s1.insertAdjacentElement('beforeend', aaa);
-}else if(data.list[Cha]) {
-
-    for (let n of data.list[Cha]) {
-
-      if (n.genres.includes(Gan)) {
-        let q1 = document.createElement('tr');
-        let p1 = document.createElement('td');
-
-        p1.textContent = n.start_time;
-        s1.insertAdjacentElement('beforeend', q1);
-        s1.insertAdjacentElement('beforeend', p1);
-
-        let p2 = document.createElement('td');
-        p2.textContent = n.end_time;
-        s1.insertAdjacentElement('beforeend', p2);
-
-        let p3 = document.createElement('td');
-        p3.textContent = n.title;
-        s1.insertAdjacentElement('beforeend', p3);
-
-        let p4 = document.createElement('td');
-        p4.textContent = n.subtitle;
-        s1.insertAdjacentElement('beforeend', p4);
-
-        let p5 = document.createElement('td');
-        p5.textContent = n.content;
-        s1.insertAdjacentElement('beforeend', p5);
-
-        let p6 = document.createElement('td');
-        p6.textContent = n.act;
-        s1.insertAdjacentElement('beforeend', p6);
-
-      }
-
+  // data をコンソールに出力
+  console.log(data);
+  
+  if(bangumi === "e1"||bangumi === "g1"){
+ for(let j = 0; j < 5; j++){
+  if(bangumi === "e1"){
+    //let pro = document.querySelector("data.list.e1["+ j +"].service.name");
+    let pro = data.list.e1[j].service.name;
+    console.log(pro);
+  let s = document.querySelector('span#pro');
+s.textContent = pro;
+  let pra = data.list.e1[j].title;
+  let d = document.querySelector('span#pra');
+d.textContent = pra;
+}else {
+  let pro = data.list.g1[j].service.name;
+  let s = document.querySelector('span#pro');
+s.textContent = pro;
+  let pra = data.list.g1[j].title;
+  let d = document.querySelector('span#pra');
+d.textContent = pra;
+}
     }
-
   }
 
-  }
+  // data.x を出力
+  //console.log(data.x);
+}
 
-
-
-
-// 通信エラーが発生した時の処理
-function showError(err) {
+function showError(err){
   console.log(err);
 }
 
-// 通信の最後にいつも実行する処理
-function finish() {
-  console.log('Ajax 通信が終わりました');
+function finish(){
+  console.log('Ajax通信が終わりました');
 }
-
-
-let b1 = document.querySelector('#print');
-b1.addEventListener('click', sendRequest);
