@@ -83,7 +83,7 @@ let data = {
 
 //
 
-  /*let pro = data.list.g1[0].service.name;
+/*let pro = data.list.g1[0].service.name;
   let s = document.querySelector('span#pro');
 s.textContent = pro;
   let pra = data.list.g1[0].title;
@@ -97,9 +97,9 @@ function kensaku(){
   //URLを設定
 
   //ジャンル選び
-  let i = document.querySelectorAll('input[name="genre"]');
-  let o = document.querySelector('input[name="genre"]');
-  let genre = o.value;
+  let i = document.querySelectorAll('input[name="janru"]');
+  let o = document.querySelector('input[name="janru"]');
+  let janru = o.value;
   //番組選び
   let p = document.querySelectorAll('input[name="bangumi"]');
 
@@ -112,14 +112,14 @@ function kensaku(){
       bangumi = r.value;
     }
   }
-  let url ='https://www.nishita-lab.org/web-contents/jsons/nhk/'+ bangumi +'-'+genre+'-'+'j.json';
+  let url ='https://www.nishita-lab.org/web-contents/jsons/nhk/'+ bangumi +'-'+janru+'-'+'j.json';
 
   axios.get(url)
   .then(showResult)   // 通信成功
   .catch(showError)   // 通信失敗
   .then(finish);  
 
-  console.log(genre);
+  console.log(janru);
   console.log(bangumi);
 }
 
