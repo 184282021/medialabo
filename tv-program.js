@@ -97,8 +97,8 @@ function kensaku(){
   //URLを設定
 
   //ジャンル選び
-  let i = document.querySelectorAll('input[name="janru"]');
-  let o = document.querySelector('input[name="janru"]');
+  let i = document.querySelectorAll('input[name="genre"]');
+  let o = document.querySelector('input[name="genre"]');
   let genre = o.value;
   //番組選び
   let p = document.querySelectorAll('input[name="bangumi"]');
@@ -112,7 +112,7 @@ function kensaku(){
       bangumi = r.value;
     }
   }
-  let url ='https://www.nishita-lab.org/web-contents/jsons/nhk/'+ bangumi +'-'+janru+'-'+'j.json';
+  let url ='https://www.nishita-lab.org/web-contents/jsons/nhk/'+ bangumi +'-'+genre+'-'+'j.json';
 
   axios.get(url)
   .then(showResult)   // 通信成功
