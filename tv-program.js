@@ -99,7 +99,7 @@ function kensaku(){
   //ジャンル選び
   let i = document.querySelectorAll('input[name="janru"]');
   let o = document.querySelector('input[name="janru"]');
-  let janru = o.value;
+  let genre = o.value;
   //番組選び
   let p = document.querySelectorAll('input[name="bangumi"]');
 
@@ -119,7 +119,7 @@ function kensaku(){
   .catch(showError)   // 通信失敗
   .then(finish);  
 
-  console.log(janru);
+  console.log(genre);
   console.log(bangumi);
 }
 
