@@ -52,3 +52,21 @@
     line-height: 2;
   }
   
+
+
+
+  div.zentai{
+    display: flex;          /* フレックスボックスにする */
+    flex-direction: row;    /* 横向きに表示（column に変更すると縦向きに表示） */
+  
+    width:"100%";
+    border: 1px solid gray;
+    padding: 5px 5px 5px 0;
+    text-align: center;
+  }
+  div.l{
+    flex: 2;                /* 横幅2で表示 */
+  
+      background-color: rgb(118, 163, 231);
+      margin-left: 5px;
+  }
