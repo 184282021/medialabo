@@ -184,3 +184,6 @@ function showError(err){
 function finish(){
   console.log('Ajax通信が終わりました');
 }
+
+let b1 = document.querySelector('#print');
+b1.addEventListener('click', sendRequest);
