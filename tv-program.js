@@ -168,6 +168,75 @@ d.textContent = pra;
   //console.log(data.x);
 }
 
+
+
+function hantei(resp) {
+  const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
+  const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
+
+
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+  let pyoso1 = document.querySelectorAll('td');//td要素を取得する
+  for (let TD of pyoso1) {
+    TD.remove();
+  }
+  let TR = document.querySelectorAll('tr');
+  for (let T of TR) {
+    T.remove();
+  }
+if(data===null){
+  let aaa = document.createElement('p');
+  aaa.textContent ='検索結果に合う番組はありませんでした.';
+  s1.insertAdjacentElement('beforeend', aaa);
+}else if(data.list[Cha]) {
+
+    for (let n of data.list[Cha]) {
+
+      if (n.genres.includes(Gan)) {
+        let q1 = document.createElement('tr');
+        let p1 = document.createElement('td');
+
+        p1.textContent = n.start_time;
+        s1.insertAdjacentElement('beforeend', q1);
+        s1.insertAdjacentElement('beforeend', p1);
+
+        let p2 = document.createElement('td');
+        p2.textContent = n.end_time;
+        s1.insertAdjacentElement('beforeend', p2);
+
+        let p3 = document.createElement('td');
+        p3.textContent = n.title;
+        s1.insertAdjacentElement('beforeend', p3);
+
+        let p4 = document.createElement('td');
+        p4.textContent = n.subtitle;
+        s1.insertAdjacentElement('beforeend', p4);
+
+        let p5 = document.createElement('td');
+        p5.textContent = n.content;
+        s1.insertAdjacentElement('beforeend', p5);
+
+        let p6 = document.createElement('td');
+        p6.textContent = n.act;
+        s1.insertAdjacentElement('beforeend', p6);
+
+      }
+
+    }
+
+  }
+
+  }
+
+
+
 function showError(err){
   console.log(err);
 }
