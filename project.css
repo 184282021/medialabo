@@ -1,9 +1,5 @@
 
-html {
-    font-family: 'Helvetica neue', Arial, 'sans serif';
-    font-size: 10px;
-    background-color: rgb(165, 165, 165);
-  }
+
   
   body {
     width: 80em;
@@ -67,12 +63,3 @@ html {
     line-height: 2;
   }
   
-  a:link{
-    color: aqua;
-  }
-  a:visited{
-    color:green;
-  }
-  a:hover{
-    color:blue;
-  }
