@@ -81,10 +81,6 @@ let data = {
 
 /////////////////// 課題3-2 はここから書き始めよう
 
-console.log(list.g1.servise.name);
-console.log(list.g1.title);
-
-
 //
 
   /*let pro = data.list.g1[0].service.name;
