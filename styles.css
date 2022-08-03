@@ -7,35 +7,3 @@ h2{
     border-bottom: dashed rgb(205, 205, 252);
 }
 
-table{
-  
-    padding: .25rem .25rem .25rem .25rem;
-    
-    display: table;
-    table-layout: fixed;
-    
-    
-  }
-  th{
-    background-color:lightcyan;
-  }
-  
-  table,td, th{
-    border: 1px solid black;
-  }
-  
-  div.zentai{
-    display: flex;          /* フレックスボックスにする */
-    flex-direction: row;    /* 横向きに表示（column に変更すると縦向きに表示） */
-  
-    width:"100%";
-    border: 1px solid gray;
-    padding: 5px 5px 5px 0;
-    text-align: center;
-  }
-  div.l{
-    flex: 2;                /* 横幅2で表示 */
-  
-      background-color: rgb(118, 163, 231);
-      margin-left: 5px;
-  }
