@@ -13,6 +13,19 @@
 
      <h1>NHK番組検索</h1>
 
+
+
+
+ <h2>
+    <label for='チャンネル名'>チャンネル名: </label>
+    <select id='channel'>
+      <option value='g1'>NHK総合1</option>
+      <option value='e1'>Eテレ1</option>
+    </select>
+    </h2>>
+    
+
+
      <h4>番組の種類はこちら</h4>
   <ul>
     <li>0000...ニュース・報道</li>
@@ -32,12 +45,25 @@
 
 
     <h4>ジャンルを検索</h4>
-    <input type="radio" name="channel" id="ETV" value="e1">
-    <label for="ETV">Eテレ1</label>
-    <input type="radio" name="channel" id="NHK" value="g1">
-    <label for="NHK">NHK総合1</label>
-    <label for="janru"> </label>
-    <input type="text" name="genre" size="10">
+    <h2>
+    <label for='ジャンル'>ジャンル: </label>
+    <select id='genre'>
+      <option value='0000'>ニュース・報道</option>
+      <option value='0100'>スポーツ</option>
+      <option value='0205'>情報・ワイドショー</option>
+      <option value='0300'>ドラマ</option>
+      <option value='0409'>音楽</option>
+      <option value='0502'>バラエティ</option>
+      <option value='0600'>映画</option>
+      <option value='0700'>アニメ</option>
+      <option value='0800'>ドキュメンタリー・教養</option>
+      <option value='0903'>劇場・公演</option>
+      <option value='1000'>趣味・教育</option>
+      <option value='1100'>福祉</option>
+    </select>
+    <button id="print">表示</button>
+  </h2>
+
     <button id="print">検索</button> 
 
     <p><span id="pro"></span>   <span id="pra"></span></p>
