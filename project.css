@@ -1,6 +1,6 @@
   
 body{
-    background-color: beige;
+    background-color: white;
   }
   h1 {
       margin: 10px;
@@ -80,6 +80,6 @@ body{
   div.l{
     flex: 2;                /* 横幅2で表示 */
   
-      background-color: rgb(118, 163, 231);
+      background-color: gray;
       margin-left: 5px;
   }
