@@ -31,7 +31,9 @@ body{
     background-color: lightcyan;
     margin-left: 5px;
   }
-  
+  ul{
+    background-color: gray;
+  }
   
   
   div.midasi1 {
