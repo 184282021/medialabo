@@ -4,9 +4,9 @@ body{
   }
   h1 {
       margin: 10px;
-      background: rgb(149, 173, 234);
+      background: white;
       padding: 5px 5px 5px 5px;
-      color: white;
+      color: purple;
     }
     div.jyan{
       display: flex;
