@@ -14,6 +14,9 @@ body{
       flex-direction: row;
       /* 横向きに表示（column に変更すると縦向きに表示） */
     }
+    h2{
+      color:rgb(255, 65, 103);
+    }
   
   div.box1 {
     flex: 2;                /* 横幅2で表示 */
